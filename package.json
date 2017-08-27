@@ -1,0 +1,19 @@
+{
+  "name": "projectapi",
+  "version": "1.0.0",
+  "description": "\"API for Delqb\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DivyaPrakash",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1",
+    "mongoose": "^4.11.8",
+    "nodemon": "^1.11.0"
+  }
+}
