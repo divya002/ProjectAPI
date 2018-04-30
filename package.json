@@ -1,7 +1,7 @@
 {
   "name": "projectapi",
   "version": "1.0.0",
-  "description": "\"API for Delqb\"",
+  "description": "\"API for Studiq\"",
   "main": "index.js",
   "scripts": {
     "start": "node app",
