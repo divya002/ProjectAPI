@@ -9,10 +9,13 @@
   "author": "DivyaPrakash",
   "license": "ISC",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
     "express": "^4.15.4",
     "gulp": "^3.9.1",
     "gulp-nodemon": "^2.2.1",
+    "jwt-simple": "^0.5.1",
     "mongoose": "^4.11.8",
     "nodemon": "^1.11.0"
   }
