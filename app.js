@@ -2,6 +2,7 @@ var express = require("express"),
     mongoose = require('mongoose'),
     bodyParser = require('body-parser');
 var cors = require('cors');
+var jwt = require('jwt-simple');
 var db = mongoose.connect('mongodb://divya:divya@ds239965.mlab.com:39965/studyq', {
     useMongoClient: true
 }, (err) => {

@@ -1,4 +1,7 @@
 var express = require('express');
+var bcrypt = require('bcrypt-nodejs');
+var jwt = require('jwt-simple');
+
 var routes = function (userRegister) {
     userRegisterRouter = express.Router();
     var userRegisterController = require('../Controllers/userRegisterController')(userRegister);
