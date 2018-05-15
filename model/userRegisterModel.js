@@ -3,7 +3,10 @@ var mongoose = require('mongoose'),
 var bcrypt = require('bcrypt-nodejs')
 
 var userRegisterModel = new Schema({
-    name: {
+    firstname: {
+        type: String
+    },
+    lastname: {
         type: String
     },
     stream: {
@@ -36,14 +39,11 @@ var userRegisterModel = new Schema({
     type: {
         type: String
     },
-    startyear: {
+    year: {
         type: Number
     },
-    endyear: {
-        type: Number
-    },
-    logged: {
-        type: Boolean
+    grade: {
+        type: String
     }
 });
 userRegisterModel.pre('save', function (next) {
