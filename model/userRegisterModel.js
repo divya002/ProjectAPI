@@ -40,7 +40,7 @@ var userRegisterModel = new Schema({
         type: String
     },
     year: {
-        type: Number
+        type: String
     },
     grade: {
         type: String
