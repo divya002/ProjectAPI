@@ -57,6 +57,44 @@ var userRegisterController = function (userRegister) {
             createSendToken(res, user)
         })
     }
+    var checkUserAvailability = async function (req, res) {
+        var loginData = req.body
+
+        var user = await userRegister.findOne({
+            username: loginData.username
+        })
+        if (user)
+            return res.json ({
+                message: 'Not Lucky!!Try Another username',
+                valid:false
+            })
+            else{
+                return res.json ({
+                    message: 'Yes..This username Available',
+                    valid:true
+                })
+            }
+        
+    }
+    var checkEmailAvailability = async function (req, res) {
+        let loginData = req.body
+
+        let email = await userRegister.findOne({
+            email: loginData.email
+        })
+        if (email)
+            return res.json ({
+                message: 'This email already registered',
+                valid:false
+            })
+            else{
+                return res.json ({
+                    message: 'Looks Good',
+                    valid:true
+                })
+            }
+        
+    }
     var findIdMiddleware = function (req, res, next) {
         userRegister.findById(req.params.userId, function (err, user) {
             if (err)
@@ -106,6 +144,8 @@ var userRegisterController = function (userRegister) {
         post: post,
         get: get,
         login: login,
+        checkEmailAvailability:checkEmailAvailability,
+        checkUserAvailability:checkUserAvailability,
         findIdMiddleware: findIdMiddleware,
         auth: auth
     }

@@ -10,6 +10,10 @@ var routes = function (userRegister) {
         .get(userRegisterController.get);
     userRegisterRouter.route('/login')
         .post(userRegisterController.login);
+    userRegisterRouter.route('/checkusername')
+        .post(userRegisterController.checkUserAvailability);
+    userRegisterRouter.route('/checkemail')
+        .post(userRegisterController.checkEmailAvailability);
     userRegisterRouter.route('/login/forgetpassword')
         .post(function (req, res) {
             var query = {};

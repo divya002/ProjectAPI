@@ -10,7 +10,7 @@ var db = mongoose.connect('mongodb://divya:divya@ds239965.mlab.com:39965/studyq'
         console.log("MongoDB DataBase Connected");
 });
 var userRegister = require("./model/userRegisterModel");
-var textBook = require("./model/textBookModel")
+var textBook = require("./model/textBookModel");
 var userRegisterRouter = require('./Routes/userRegisterRoutes')(userRegister);
 var textBookRouter = require('./Routes/textBookRoutes')(textBook);
 mongoose.Promise = Promise
